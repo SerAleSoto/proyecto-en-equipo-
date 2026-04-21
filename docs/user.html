@@ -54,13 +54,12 @@
 
 <body>
     <header>
-        <h1>Trabajo en equipo - Consulta de Usuarios</h1>
+        <h1>Trabajo en equipo - Consulta de Cliente particular</h1>
 
         <nav>
             <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="user.html">Proyectos</a></li>
-
+                <a href="index.html">Inicio</a>  <br>
+                <a href="user.html">Proyectos</a>
             </ul>
         </nav>
     </header>
@@ -100,7 +99,7 @@
                 // Mostrar todos los campos del objeto usuario
                 let contenido = "<h2>Datos del Usuario</h2><ul>";
                 for (const [clave, valor] of Object.entries(usuario)) {
-                    if (typeof valor === "object") {
+                    if (typeof valor === "object" && (clave !== "company" || clave !== "address")) {
                         contenido += `<li><strong>${clave}:</strong> ${JSON.stringify(valor, null, 2)}</li>`;
                     } else {
                         contenido += `<li><strong>${clave}:</strong> ${valor}</li>`;
