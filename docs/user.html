@@ -99,8 +99,10 @@
                 // Mostrar todos los campos del objeto usuario
                 let contenido = "<h2>Datos del Usuario</h2><ul>";
                 for (const [clave, valor] of Object.entries(usuario)) {
-                    if (typeof valor === "object" && (clave !== "company" && clave !== "address")) {
+                    if (typeof valor === "object" ) {
+                        if (clave !== "company" && clave !== "address") {
                         contenido += `<li><strong>${clave}:</strong> ${JSON.stringify(valor, null, 2)}</li>`;
+                        }   
                     } 
                     
                     // else {
