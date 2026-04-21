@@ -101,9 +101,11 @@
                 for (const [clave, valor] of Object.entries(usuario)) {
                     if (typeof valor === "object" && (clave !== "company" && clave !== "address")) {
                         contenido += `<li><strong>${clave}:</strong> ${JSON.stringify(valor, null, 2)}</li>`;
-                    } else {
-                        contenido += `<li><strong>${clave}:</strong> ${valor}</li>`;
-                    }
+                    } 
+                    
+                    // else {
+                    //     contenido += `<li><strong>${clave}:</strong> ${valor}</li>`;
+                    // }
                 }
                 contenido += "</ul>";
 
