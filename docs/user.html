@@ -102,7 +102,7 @@
                   if (typeof valor === "object") {
                     // Excluir objetos con clave "company" y "address"
                     if (clave !== "company" && clave !== "address") {
-                      contenido += `<li><strong>${clave}:</strong> ${JSON.stringify(valor, null, 2)}</li>`;
+                              contenido += `<li><strong>${clave}:</strong> ${valor}</li>`;
                     }
                   } else {
                     // Mostrar valores simples (string, number, etc.)
